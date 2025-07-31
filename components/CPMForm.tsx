@@ -122,14 +122,13 @@ export default function CPMForm({
   files,
 }: CPMFormProps) {
   const requiredFields = [
-    { key: "approverEmail", label: "ผู้อนุมัติเอกสาร" },
+    { key: "approverEmail", label: "ผู้รายงาน" },
     { key: "phoneNum", label: "เบอร์โทรติดต่อ" },
     { key: "accidentDate", label: "วันที่เกิดเหตุ" },
     { key: "accidentTime", label: "เวลา" },
     { key: "location", label: "สถานที่เกิดเหตุ" },
     { key: "cause", label: "สาเหตุของอุบัติเหตุ" },
     { key: "damageDetail", label: "รายละเอียดความเสียหาย" },
-    { key: "damageAmount", label: "มูลค่าความเสียหาย" },
   ];
   const allDamage = [
     ...existingFiles.filter((a) => a.type === "DAMAGE_IMAGE"),
