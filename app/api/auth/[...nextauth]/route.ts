@@ -45,8 +45,8 @@ const authOptions: NextAuthOptions = {
     },
   },
   pages: {
-    signIn: "/claim/signin",
-    error: "/claim/signin",
+    signIn: "/signin",
+    error: "/signin",
   },
 };
 

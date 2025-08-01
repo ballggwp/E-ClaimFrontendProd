@@ -87,7 +87,7 @@ export default function Fppa04ListPage() {
 
   // Redirect if unauthenticated
   useEffect(() => {
-    if (status === 'unauthenticated') router.push('/claim/login')
+    if (status === 'unauthenticated') router.push('/login')
   }, [status, router])
 
   if (status !== 'authenticated') return null
@@ -160,7 +160,7 @@ export default function Fppa04ListPage() {
                         <td className="px-4 py-3 text-sm text-gray-800">{new Date(c.createdAt).toLocaleDateString('th-TH')}</td>
                         <td className="px-4 py-3">
                           <Link
-                            href={`/claim/fppa04/${subCat}/new/${c.id}` +
+                            href={`/fppa04/${subCat}/new/${c.id}` +
                               `?categoryMain=${encodeURIComponent(mainCat)}` +
                               `&categorySub=${encodeURIComponent(subCat)}`}
                             className="text-indigo-600 hover:text-indigo-800 font-medium"

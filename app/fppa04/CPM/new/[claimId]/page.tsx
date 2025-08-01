@@ -115,7 +115,7 @@ export default function NewFPPA04CPMPage() {
           <h2 className="text-lg font-medium text-gray-800">
             Claim ID: <span className="font-semibold">{defaults.docNum}</span>
           </h2>
-          <Link href={`/claim/claims/cpm/${claimId}`} className="text-blue-600 hover:underline">→ ดู claims</Link>
+          <Link href={`/claims/cpm/${claimId}`} className="text-blue-600 hover:underline">→ ดู claims</Link>
         </div>
         {/* form card */}
         <div className="bg-white rounded-b-xl shadow">
@@ -131,7 +131,7 @@ export default function NewFPPA04CPMPage() {
               onSave={async (vals) => {
                 // clear draft then navigate
                 localStorage.removeItem(STORAGE_KEY)
-                router.push(`/claim/dashboard`)
+                router.push(`/dashboard`)
               }}
             />
           </div>

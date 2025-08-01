@@ -12,7 +12,7 @@ function AutoLogout({ children }: { children: React.ReactNode }) {
       const ms = exp * 1000 - Date.now();
       if (ms > 0) {
         const id = setTimeout(() => {
-          signOut({ callbackUrl: "/claim/login" });
+          signOut({ callbackUrl: "/login" });
         }, ms);
         return () => clearTimeout(id);
       }
@@ -27,7 +27,7 @@ export default function Providers({
   children: React.ReactNode;
 }) {
   return (
-    <SessionProvider basePath="/claim/api/auth" refetchInterval={300}>
+    <SessionProvider basePath="/api/auth" refetchInterval={300}>
       <AutoLogout>{children}</AutoLogout>
     </SessionProvider>
   );

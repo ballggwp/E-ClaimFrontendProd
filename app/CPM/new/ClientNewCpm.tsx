@@ -329,7 +329,7 @@ export default function NewCpmPage() {
         }
       );
 
-      router.push(`/claim/dashboard`);
+      router.push(`/dashboard`);
     } catch (err: any) {
       setError(err.message);
       setSubmitting(false);

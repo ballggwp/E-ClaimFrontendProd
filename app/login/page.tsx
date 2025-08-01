@@ -7,19 +7,18 @@ import Providers from '@/components/Providers'
 
 export default function LoginPage() {
   const router = useRouter()
-  const { data: session } = useSession()
-
+  const { data: session, status } = useSession()
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState<string | null>(null)
   const [loading, setLoading] = useState(false)
 
-  // ถ้ามี session อยู่แล้วก็ส่งผู้ใช้ไปหน้าหลักทันที
+  // รอจน session มาแล้วค่อย redirect
   useEffect(() => {
-    if (session) {
-      router.replace('/claim/dashboard')
+    if (status === 'authenticated') {
+      router.replace('/dashboard')
     }
-  }, [session, router])
+  }, [status, router])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -38,7 +37,7 @@ export default function LoginPage() {
       setError(res.error)
     } else {
       // ถ้า login สำเร็จให้เปลี่ยนหน้าเลย
-      router.replace('/claim/dashboard')
+      router.replace('/dashboard')
     }
   }
 

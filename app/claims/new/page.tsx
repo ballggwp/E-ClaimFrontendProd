@@ -43,7 +43,7 @@ export default function NewClaimPage() {
     }
 
     router.push(
-      `/claim/${categorySub}/new?${new URLSearchParams({
+      `/${categorySub}/new?${new URLSearchParams({
         categoryMain,
         categorySub,
       }).toString()}`

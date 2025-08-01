@@ -82,7 +82,7 @@ export default function ClaimDetailPage() {
 
   useEffect(() => {
     if (status === "unauthenticated") {
-      router.push("/claim/login");
+      router.push("/login");
     }
   }, [status, router]);
 

@@ -10,7 +10,8 @@ export default function HomeRedirect() {
 const { status } = useSession();
 useEffect(() => {
   console.log(status)
-    if (status === "unauthenticated") router.push("/claim/login");
+    if (status === "unauthenticated") router.push("/login");
+    else router.push("/login");
   }, [status, router]);
   return null;
 }

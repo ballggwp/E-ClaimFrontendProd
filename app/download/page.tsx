@@ -334,7 +334,7 @@ export default function DownloadSelectPage() {
                     key={c.id}
                     className="hover:bg-gray-50 cursor-pointer"
                     onClick={() =>
-                      router.push(`/claim/download/claim/${subCat}/${c.id}`)
+                      router.push(`/download/claim/${subCat}/${c.id}`)
                     }
                   >
                     <td className="px-6 py-5 text-base text-gray-800 whitespace-nowrap">

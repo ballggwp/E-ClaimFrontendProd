@@ -93,7 +93,7 @@ const [otherPage,    setOtherPage]    = useState(1);
 
   // redirect unauthenticated users
   useEffect(() => {
-    if (status === "unauthenticated") router.push("/claim/login");
+    if (status === "unauthenticated") router.push("/login");
   }, [status, router]);
 
   // fetch both created and assigned claims
@@ -251,7 +251,7 @@ const pagedOther      = otherClaims.slice(
                 className="border border-gray-300 px-3 py-1 rounded focus:outline-none focus:border-blue-500"
               />
               <Link
-                href="/claim/claims/new"
+                href="/claims/new"
                 className="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition"
               >
                 + สร้างเคลมใหม่
@@ -416,7 +416,7 @@ if (c.status === "COMPLETED") {
               {/* Header */}
               <div className="flex justify-between items-center mb-4">
                 <Link
-                  href={`/claim/claims/cpm/${c.id}`}
+                  href={`/claims/cpm/${c.id}`}
                   className="text-xl text-blue-600 font-semibold hover:underline"
                 >
                   {c.docNum}
@@ -462,7 +462,7 @@ if (c.status === "COMPLETED") {
                   <dd className="mt-1">
                     {fppaLinkStatuses.includes(c.status) ? (
                       <Link
-                        href={`/claim/fppa04/${c.categorySub}/${c.id}`}
+                        href={`/fppa04/${c.categorySub}/${c.id}`}
                         className="text-blue-600 hover:underline"
                       >
                         ดูฟอร์ม

@@ -53,7 +53,7 @@ export default function ClaimsPage() {
   // Redirect if not authenticated
   useEffect(() => {
     if (status === "unauthenticated") {
-      router.push("/claim/login");
+      router.push("/login");
     }
   }, [status, router]);
 
@@ -161,7 +161,7 @@ const pagedClaims = useMemo(() => {
           <header className="flex items-center justify-between">
             <h1 className="text-3xl font-bold text-gray-800">รายการเคลม</h1>
             <Link
-              href="/claim/claims/new"
+              href="/claims/new"
               className="bg-green-600 hover:bg-green-700 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition"
             >
               + สร้างเคลมใหม่
@@ -191,7 +191,7 @@ const pagedClaims = useMemo(() => {
                       >
                         <td className="px-6 py-3">
                           <Link
-                            href={`/claim/claims/${c.categorySub.toLowerCase()}/${c.id}`}
+                            href={`/claims/${c.categorySub.toLowerCase()}/${c.id}`}
                             className="text-blue-600 hover:underline"
                           >
                             {c.docNum}
@@ -224,7 +224,7 @@ const pagedClaims = useMemo(() => {
                             c.status === "PENDING_MANAGER_REVIEW" ||
                           c.status === "PENDING_USER_CONFIRM"||c.status === "COMPLETED" ? (
                               <Link
-                                href={`/claim/fppa04/${c.categorySub}/${c.id}`}
+                                href={`/fppa04/${c.categorySub}/${c.id}`}
                                 className="text-blue-600 hover:underline"
                               >
                                 {"FPPA04_CPM"}
@@ -266,7 +266,7 @@ const pagedClaims = useMemo(() => {
                       >
                         <td className="px-6 py-3">
                           <Link
-                            href={`/claim/claims/${c.categorySub.toLowerCase()}/${c.id}`}
+                            href={`/claims/${c.categorySub.toLowerCase()}/${c.id}`}
                             className="text-blue-600 hover:underline"
                           >
                             {c.docNum}
@@ -299,7 +299,7 @@ const pagedClaims = useMemo(() => {
                             c.status === "PENDING_MANAGER_REVIEW" ||
                           c.status === "PENDING_USER_CONFIRM"||c.status === "COMPLETED" ? (
                               <Link
-                                href={`/claim/fppa04/${c.categorySub}/${c.id}`}
+                                href={`/fppa04/${c.categorySub}/${c.id}`}
                                 className="text-blue-600 hover:underline"
                               >
                                 {"FPPA04_CPM"}
@@ -340,7 +340,7 @@ const pagedClaims = useMemo(() => {
                     >
                       <td className="px-6 py-3">
                         <Link
-                          href={`/claim/claims/${c.categorySub.toLowerCase()}/${c.id}`}
+                          href={`/claims/${c.categorySub.toLowerCase()}/${c.id}`}
                           className="text-blue-600 hover:underline"
                         >
                           {c.docNum}
@@ -371,7 +371,7 @@ const pagedClaims = useMemo(() => {
                           c.status === "PENDING_MANAGER_REVIEW" ||
                           c.status === "PENDING_USER_CONFIRM"||c.status === "COMPLETED" ? (
                             <Link
-                              href={`/claim/fppa04/${c.categorySub}/${c.id}`}
+                              href={`/fppa04/${c.categorySub}/${c.id}`}
                               className="text-blue-600 hover:underline"
                             >
                               {c.docNum}

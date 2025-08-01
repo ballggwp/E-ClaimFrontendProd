@@ -449,7 +449,7 @@ export default function ClaimDetailPage() {
         }
       );
       if (!res.ok) throw new Error(await res.text());
-      router.push("/claim/dashboard");
+      router.push("/dashboard");
     } catch (e: any) {
       Swal.fire("Error", e.message, "error");
     } finally {
@@ -483,7 +483,7 @@ export default function ClaimDetailPage() {
         }
       );
       if (!res.ok) throw new Error(await res.text());
-      router.push("/claim/dashboard");
+      router.push("/dashboard");
     } catch (e: any) {
       Swal.fire("Error", e.message, "error");
     } finally {
@@ -507,7 +507,7 @@ export default function ClaimDetailPage() {
     })
       .then((r) => {
         if (!r.ok) throw new Error(r.statusText);
-        router.push("/claim/claims");
+        router.push("/claims");
       })
       .catch((e) => Swal.fire("Error", e.message, "error"))
       .finally(() => setSubmitting(false));

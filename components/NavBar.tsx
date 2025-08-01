@@ -21,25 +21,25 @@ export default function NavBar() {
     : "";
 
   const showLoginLink =
-    status !== "authenticated" && pathname !== "/claim" && pathname !== "/claim/login";
+    status !== "authenticated" && pathname !== "/" && pathname !== "/login";
 
   // define your nav links
   const navLinks = [
-    { href: "/claim/dashboard", label: "Dashboard", show: !!session },
-    { href: "/claim/claims", label: "เคลม", show: session?.user != null },
+    { href: "/dashboard", label: "Dashboard", show: !!session },
+    { href: "/claims", label: "เคลม", show: session?.user != null },
     {
-      href: "/claim/fppa04",
+      href: "/fppa04",
       label: "ฟปภ04",
       show: session?.user.role === "INSURANCE",
     },
-    { href: "/claim/download", label: "Download", show: session?.user != null },
+    { href: "/download", label: "Download", show: session?.user != null },
   ];
 
   return (
     <nav className="bg-white border-b shadow-sm">
       <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/claim/dashboard" className="flex items-center space-x-2">
+        <Link href="/dashboard" className="flex items-center space-x-2">
           <Image
             src="/mitrphollogo.png"
             alt="Mitr Phol Logo"
@@ -84,7 +84,7 @@ export default function NavBar() {
                 </span>
               </div>
               <button
-                onClick={() => signOut({ callbackUrl: "/claim/login" })}
+                onClick={() => signOut({ callbackUrl: "/login" })}
                 className="px-4 py-1.5 bg-red-50 text-red-600 hover:bg-red-100 rounded-md text-sm font-medium transition"
               >
                 Logout
@@ -93,7 +93,7 @@ export default function NavBar() {
           ) : (
             showLoginLink && (
               <Link
-                href="/claim/login"
+                href="/login"
                 className="px-4 py-1.5 bg-blue-600 text-white hover:bg-blue-700 rounded-md text-sm font-medium transition"
               >
                 Login

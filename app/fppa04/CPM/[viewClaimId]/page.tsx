@@ -265,7 +265,7 @@ const userConfirmDocs = attachments.filter((a: { type: string; }) => a.type === 
             Claim ID: <span className="font-semibold">{defaults.docNum}</span>
           </h2>
           <Link
-            href={`/claim/claims/cpm/${viewClaimId}`}
+            href={`/claims/cpm/${viewClaimId}`}
             className="text-blue-600 hover:underline"
           >
             → ดู claims
@@ -341,7 +341,7 @@ const userConfirmDocs = attachments.filter((a: { type: string; }) => a.type === 
                         body: JSON.stringify({ action: "approve" }),
                       }
                     );
-                    router.replace("/claim/dashboard");
+                    router.replace("/dashboard");
                   }}
                   className="flex items-center bg-green-500 hover:bg-green-600 text-white font-medium px-5 py-3 rounded-xl shadow-lg transition"
                 >
@@ -384,7 +384,7 @@ const userConfirmDocs = attachments.filter((a: { type: string; }) => a.type === 
                         }),
                       }
                     );
-                    router.replace("/claim/dashboard");
+                    router.replace("/dashboard");
                   }}
                   className="flex items-center bg-red-600 text-white px-5 py-3 rounded-xl shadow-lg"
                 >
@@ -491,7 +491,7 @@ const userConfirmDocs = attachments.filter((a: { type: string; }) => a.type === 
                   }
                 );
                 if (!res.ok) throw new Error(await res.text());
-                router.replace("/claim/dashboard");
+                router.replace("/dashboard");
               }}
               className="flex items-center bg-blue-600 text-white px-5 py-3 rounded-xl shadow-lg"
             >
@@ -533,7 +533,7 @@ const userConfirmDocs = attachments.filter((a: { type: string; }) => a.type === 
                   }
                 );
                 if (!res.ok) throw new Error(await res.text());
-                router.replace("/claim/dashboard");
+                router.replace("/dashboard");
               }}
               className="flex items-center bg-red-600 text-white px-5 py-3 rounded-xl shadow-lg"
             >
