@@ -19,11 +19,11 @@ const authOptions: NextAuthOptions = {
           { validateStatus: () => true }
         );
         if (res.status !== 200) {
-          console.log("route error : ",res);
+          //console.log("route error : ",res);
           const msg = res.data?.message || "Invalid credentials";
           throw new Error(msg);
         }
-        console.log("route success : ",res)
+        //console.log("route success : ",res)
         const { user, token } = res.data;
         return { ...user, accessToken: token };
       },

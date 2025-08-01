@@ -565,9 +565,9 @@ export default function ClaimDetailPage() {
             <div className="grid grid-cols-4 gap-4">
               {files.map((att) => {
                 const isImage = /\.(jpe?g|png|gif|bmp)$/i.test(att.fileName);
-                console.log(att.url)
+                //console.log(att.url)
                 const fileHref = `http://10.25.68.72/claim${att.url}`;
-                console.log(fileHref)
+                //console.log(fileHref)
                 return (
                   <div
                     key={att.id}

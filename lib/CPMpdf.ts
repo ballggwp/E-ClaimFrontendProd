@@ -328,7 +328,7 @@ export function createCPMFormPDF(data: CPMFormPDFData) {
   doc.setFont("THSarabunNew", "normal");
   doc.text(`ฝ่ายประกันกลุ่ม บริษัท น้ำตาลมิตรผล จำกัด`, 10, y);
   y += 8;
-  console.log(y);
+  //console.log(y);
   doc.text(`โทร 02-794-1000 ต่อ 620 หรือ 260`, 10, y);
   y = 265;
   doc.setFontSize(16);
